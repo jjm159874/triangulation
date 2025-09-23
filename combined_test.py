@@ -23,8 +23,8 @@ import math
 import argparse
 
 # ========= 사용자 설정 (네 환경 경로 그대로 둠) =========
-NPZ_PATH       = r"C:\Users\user\Documents\캡스턴 디자인\triangulation\calib_out\old_camera_same\stereo\stereo_params_scaled.npz"
-MODEL_PATH     = r"C:\Users\user\Documents\캡스턴 디자인\triangulation\best_6.pt"
+NPZ_PATH       = r"C:\Users\user\Documents\캡스턴 디자인\triangulation\capstonedesign_triangulation\calib_out\old_camera_same\stereo\stereo_params_scaled.npz"
+MODEL_PATH     = r"C:\Users\user\Documents\캡스턴 디자인\triangulation\capstonedesign_triangulation\best_6.pt"
 
 CAM1_INDEX     = 1   # 왼쪽 카메라
 CAM2_INDEX     = 2   # 오른쪽 카메라
@@ -264,7 +264,7 @@ def send_servo_angles(ctl, yaw_cmd, pitch_cmd):
 # ---------- 메인 ----------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--port", default="COM4", help="서보 보드 포트 (예: COM4)")
+    ap.add_argument("--port", default="COM7", help="서보 보드 포트 (예: COM4)")
     ap.add_argument("--baud", type=int, default=115200)
     ap.add_argument("--center", action="store_true", help="시작 시 1회 센터 이동")
     ap.add_argument("--pitch", type=float, required=True, help="초기 pitch 각도 (베이스)")
